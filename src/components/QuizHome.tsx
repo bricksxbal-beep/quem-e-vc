@@ -40,9 +40,6 @@ const QuizHome = ({ onSelectQuiz, lang }: QuizHomeProps) => {
           })}
         </div>
 
-        <p className="text-quiz-muted text-center mt-8 text-xs">
-          {t(lang, "totalTests")}
-        </p>
       </div>
     </div>
   );

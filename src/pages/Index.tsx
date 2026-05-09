@@ -95,6 +95,8 @@ const Index = () => {
     <div className="pb-14">
       <AppMenu lang={lang} onChangeLang={handleLangChange} />
 
+      {screen === "welcome" && <WelcomeScreen onStart={() => setScreen("home")} lang={lang} />}
+
       {screen === "home" && <QuizHome onSelectQuiz={handleSelectQuiz} lang={lang} />}
 
       {screen === "quiz" && currentQuiz && (

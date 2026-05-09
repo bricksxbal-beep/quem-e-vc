@@ -9,15 +9,16 @@ import InterstitialAd from "@/components/InterstitialAd";
 import RewardAd from "@/components/RewardAd";
 import BannerAd from "@/components/BannerAd";
 import AppMenu from "@/components/AppMenu";
+import WelcomeScreen from "@/components/WelcomeScreen";
 
-type Screen = "home" | "quiz" | "interstitial" | "result";
+type Screen = "welcome" | "home" | "quiz" | "interstitial" | "result";
 
 const Index = () => {
   const [lang, setLang] = useState<Language>(() => {
     const saved = localStorage.getItem("quiz_lang");
     return saved === "en" || saved === "pt" ? saved : detectLanguage();
   });
-  const [screen, setScreen] = useState<Screen>("home");
+  const [screen, setScreen] = useState<Screen>("welcome");
   const [currentQuizId, setCurrentQuizId] = useState("");
   const [questionIndex, setQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
